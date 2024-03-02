@@ -1,7 +1,16 @@
+import CardBox from "../components/cardBox/cardBox"
+import UserForm from "../components/userForm.jsx/userForm"
 
 function CreateUser() {
   return (
-    <div>CreateUser</div>
+    <div>
+      <CardBox >
+        {
+          <UserForm></UserForm>
+        }
+
+      </CardBox>
+    </div>
   )
 }
 

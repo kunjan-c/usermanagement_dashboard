@@ -26,7 +26,7 @@ const UserList = () => {
                 <th>Username</th>
                 <th>Email</th>
                 <th>Role</th>
-                {/* <th>Action</th> */}
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -38,7 +38,7 @@ const UserList = () => {
                     <td>{data.username}</td>
                     <td>{data.email}</td>
                     <td>{data.role}</td>
-
+                    <td><button className="user-detail-view-btn">View</button></td>
                   </tr>
                 ))
               }

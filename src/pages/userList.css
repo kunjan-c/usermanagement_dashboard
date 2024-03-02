@@ -55,8 +55,19 @@
     border: none;
     padding: 10px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .pagination-active-page{
     color : #fcaf3b;
+}
+
+.user-detail-view-btn{
+    background-color: transparent;
+    color: #fcaf3b;;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
 }

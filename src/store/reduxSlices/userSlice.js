@@ -5,16 +5,18 @@ import { userData } from "../../data/userData";
 
 
 const initialState = {
-    userList: userData,
-  };
-  
+  userList: userData,
+};
+
 
 const userSlice = createSlice({
-    name : "users",
-    initialState : initialState,
-    reducers : {
-
-    },
+  name: "users",
+  initialState: initialState,
+  reducers: {
+    createNewUser: (state, actions) => {
+      state.userList.push(actions.payload)
+    }
+  },
 })
 
 export const userSliceActions = userSlice.actions;
