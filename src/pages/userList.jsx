@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./userList.css";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 const UserList = () => {
   const userList = useSelector(state => state.users.userList);
   const [currentPage, setCurrentPage] = useState(0); // Initialize to 0
@@ -38,7 +40,7 @@ const UserList = () => {
                     <td>{data.username}</td>
                     <td>{data.email}</td>
                     <td>{data.role}</td>
-                    <td><button className="user-detail-view-btn">View</button></td>
+                    <td><Link to={`/edit/${data.ID}`} className="user-detail-view-btn">View</Link></td>
                   </tr>
                 ))
               }
