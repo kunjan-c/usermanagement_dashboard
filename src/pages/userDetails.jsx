@@ -42,6 +42,12 @@ const UserDetails = () => {
         <div className="user-detail-field-value">{formData.email}</div>
 
       </div>
+
+      <div className="user-detail-group">
+        <div className="user-detail-field">Role:</div>
+        <div className="user-detail-field-value">{formData.role}</div>
+
+      </div>
     </div>
   )
 }
