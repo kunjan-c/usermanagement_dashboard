@@ -40,7 +40,9 @@ const UserList = () => {
                     <td>{data.username}</td>
                     <td>{data.email}</td>
                     <td>{data.role}</td>
-                    <td><Link to={`/edit/${data.ID}`} className="user-detail-view-btn">View</Link></td>
+                    {/* <td><Link to={`/edit/${data.ID}`} className="user-detail-view-btn">View</Link></td> */}
+                    <td><Link to={`/userDetails/${data.ID}`} className="user-detail-view-btn">View</Link></td>
+
                   </tr>
                 ))
               }

@@ -1,0 +1,37 @@
+
+.user-detail-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.user-detail-edit-btn {
+    background-color: var(--primaryYellowColor);
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+
+}
+
+.user-detail-group {
+    padding: 20px 40px 40px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-detail-field {
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.user-detail-field-value {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 100;
+}

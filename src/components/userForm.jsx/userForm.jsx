@@ -7,15 +7,12 @@ import { useDispatch } from "react-redux";
 const UserForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-
   const [formData, setFormData] = useState({
     ID: '',
     username: '',
     email: '',
     role: ''
   });
-
 
   //Handle Form Input Cahnge
   const handleChange = (e) => {

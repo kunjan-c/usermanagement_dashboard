@@ -1,7 +1,7 @@
 import "./cardBox.css";
 import PropTypes from "prop-types";
 
-const Card = ({children}) => {
+const CardBox = ({children}) => {
   return (
    
     <div className="card-conatiner ">
@@ -11,8 +11,8 @@ const Card = ({children}) => {
   )
 }
 
-Card.propTypes = {
+CardBox.propTypes = {
     children: PropTypes.node.isRequired 
   };
   
-export default Card
+export default CardBox
