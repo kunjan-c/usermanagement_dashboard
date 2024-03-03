@@ -28,7 +28,7 @@ const userSlice = createSlice({
       }
     },
     deleteUser(state,action){
-      console.log(action.payload);
+
       const { id } = action.payload
       state.userList = state.userList.filter(user => user.ID !== id);
       localStorage.setItem('userList', JSON.stringify(state.userList));

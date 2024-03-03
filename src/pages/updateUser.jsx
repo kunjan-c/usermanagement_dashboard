@@ -17,7 +17,7 @@ const UpdateUser = () => {
     if (existingUser) {
       // Update existing user
       const updatedUser = { ...existingUser, ...formData };
-      console.log(updatedUser);
+  
       dispatch(userSliceActions.updateUser(updatedUser));
     }
     navigate("/")

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const UserForm = ({ initialFormData, onFormSubmit,formText }) => {
-  console.log(initialFormData);
+
   const [formData, setFormData] = useState(initialFormData || {
     ID: '',
     username: '',
@@ -41,7 +41,7 @@ const UserForm = ({ initialFormData, onFormSubmit,formText }) => {
       <form onSubmit={handleSubmit}>
         <div className="user-creation-form-group">
           <label htmlFor="ID">ID:</label>
-          <input type="text" id="ID" name="ID" value={formData.ID} onChange={handleChange} />
+          <input type="text" id="ID" name="ID" value={formData.ID} onChange={handleChange} disabled={formText === "Update User"}/>
         </div>
         <div className="user-creation-form-group">
           <label htmlFor="username">Username:</label>
