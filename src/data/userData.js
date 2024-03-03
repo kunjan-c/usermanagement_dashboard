@@ -160,24 +160,6 @@
       "username": "GabriellaGreen",
       "email": "gabriella.green@example.com",
       "role": "User"
-    },
-    {
-      "ID": 28,
-      "username": "CarterKing",
-      "email": "carter.king@example.com",
-      "role": "User"
-    },
-    {
-      "ID": 29,
-      "username": "AriaScott",
-      "email": "aria.scott@example.com",
-      "role": "User"
-    },
-    {
-      "ID": 30,
-      "username": "JacksonAdams",
-      "email": "jackson.adams@example.com",
-      "role": "User"
     }
    
   ]

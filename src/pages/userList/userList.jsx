@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./userList.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { userSliceActions } from "../../store/reduxSlices/userSlice";
 import Heading from "../../components/heading/heading";
 
 const UserList = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const userList = useSelector(state => state.users.userList);
   const [currentPage, setCurrentPage] = useState(0); // Initialize to 0
   const itemsPerPage = 10;
@@ -25,6 +26,7 @@ const UserList = () => {
     const confirmDelete = window.confirm("Are you sure you want to delete this user?");
     if (confirmDelete) {
       dispatch(userSliceActions.deleteUser({ id: id }));
+      navigate("/")
     }
   };
   return (
