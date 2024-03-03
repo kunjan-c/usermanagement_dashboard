@@ -1,9 +1,9 @@
 
 import { useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom";
 import "./userDetails.css";
 import Heading from "../../components/heading/heading";
-import arrowImg from "../../assets/png/pngwing.com.png"
+import arrowImg from "../../assets/png/pngwing.com.png";
 import { useState } from "react";
 
 const UserDetails = () => {

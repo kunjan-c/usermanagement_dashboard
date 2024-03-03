@@ -1,5 +1,5 @@
 
-import companyLogo from "../assets/passer_logo.png"
+import companyLogo from "../assets/passer_logo.png";
 const Header = () => {
   return (
     <div className="header-container">
