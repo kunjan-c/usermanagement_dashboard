@@ -9,6 +9,12 @@
     --primaryYellowColor : #fcaf3b;
     
   }
+  /* removing existing css of a tag */
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  /* center align any element */
   .position-center{
     display: flex;
     flex-direction: column;

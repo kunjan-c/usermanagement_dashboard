@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'react';
 import "./userForm.css";
 import Heading from "../heading/heading";
+import { Link } from 'react-router-dom';
 
 
-const UserForm = ({ initialFormData, onFormSubmit }) => {
+const UserForm = ({ initialFormData, onFormSubmit,formText }) => {
   console.log(initialFormData);
   const [formData, setFormData] = useState(initialFormData || {
     ID: '',
@@ -35,7 +36,8 @@ const UserForm = ({ initialFormData, onFormSubmit }) => {
 
   return (
     <div className="form-container">
-      <Heading headingText="Create New User"></Heading>
+      <Link to="/"><div className="close-icon">&times;</div></Link>
+      <Heading headingText={formText}></Heading>
       <form onSubmit={handleSubmit}>
         <div className="user-creation-form-group">
           <label htmlFor="ID">ID:</label>
@@ -52,13 +54,14 @@ const UserForm = ({ initialFormData, onFormSubmit }) => {
         <div className="user-creation-form-group">
           <label htmlFor="role">Role:</label>
           <select id="role" name="role" value={formData.role} onChange={handleChange}>
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
+          <option value="">select</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
           </select>
         </div>
 
         <div className="position-center">
-          <button type="submit" className="user-create-sub-btn">Submit</button>
+          <button type="submit" className="user-create-sub-btn">{formText === "Update User" ? "Update" : "Create"}  </button>
         </div>
       </form>
     </div>

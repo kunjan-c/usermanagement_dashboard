@@ -2,7 +2,12 @@
     min-width: 400px;
     padding: 20px 30px;
   }
-  
+  .close-icon{
+    font-size: 26px;
+    text-align: end;
+    color: black;
+    text-decoration: none;
+  }
   .user-creation-form-group {
     margin-bottom: 20px;
   

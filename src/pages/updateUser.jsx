@@ -2,6 +2,7 @@ import UserForm from "../components/userForm/userForm"
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userSliceActions } from "../store/reduxSlices/userSlice";
+import CardBox from "../components/cardBox/cardBox";
 
 const UpdateUser = () => {
   const { id } = useParams();
@@ -25,7 +26,9 @@ const UpdateUser = () => {
 
   return (
     <div>
-      {existingUser && <UserForm onFormSubmit={handleSubmit} initialFormData={existingUser[0]} />}
+      <CardBox>
+        {existingUser && <UserForm onFormSubmit={handleSubmit} initialFormData={existingUser[0]} formText="Update User" />}
+      </CardBox>
     </div>
   )
 }
