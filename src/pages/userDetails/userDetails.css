@@ -2,7 +2,6 @@
 .user-detail-header {
     display: flex;
     flex-direction: row;
-    
     justify-content: space-between;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
@@ -26,6 +25,7 @@
     padding: 20px 40px 40px 0px;
     display: flex;
     flex-direction: row;
+    word-wrap: break-word;
 }
 
 .user-detail-field {
@@ -38,4 +38,11 @@
     padding-left: 30px;
     font-size: 16px;
     font-weight: 100;
+    word-wrap: break-word;
+}
+/* Media Query for Responsive  */
+@media screen and (max-width: 500px) {
+    .user-detail-field-value {
+        width: 200px;
+    }
 }

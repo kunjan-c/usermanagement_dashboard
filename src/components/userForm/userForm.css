@@ -43,3 +43,19 @@
     margin-top: 20px;
 
   }
+
+  /* Media Query for Responsive  */
+@media screen and (max-width: 500px) {
+  .form-container {
+    width: 300px;
+    padding: 10px;
+    min-width: max-content;
+  }
+  .user-creation-form-group input[type="text"],
+  .user-creation-form-group input[type="email"],
+  .user-creation-form-group select {
+    min-width: 250px;
+    padding: 8px;
+    font-size: 14px;
+  }
+}

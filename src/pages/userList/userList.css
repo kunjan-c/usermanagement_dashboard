@@ -88,3 +88,14 @@
     text-align: center;
    
 }
+
+/* Media Query for Responsive Table */
+@media screen and (max-width: 768px) {
+    .user-table-container {
+        overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
+    }
+
+    .user-table th, .user-table td {
+        font-size: 12px; /* Reduce font size for better readability on smaller screens */
+    }
+}
