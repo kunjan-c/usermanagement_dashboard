@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import "./userForm.css";
 import Heading from "../heading/heading";
+// import { useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userSliceActions } from "../../store/reduxSlices/userSlice";
 import { useDispatch } from "react-redux";
@@ -13,7 +15,14 @@ const UserForm = () => {
     email: '',
     role: ''
   });
+//   const { id } = useParams()
+//   console.log(id);
+//   const userList = useSelector(state => state.users.userList);
+//  console.log(userList);
+//  const existingUser = userList.filter(f => f.ID == id);
+//  console.log(existingUser);
 
+// //  const {name,email} = existingUser[0];
   //Handle Form Input Cahnge
   const handleChange = (e) => {
     const { name, value } = e.target;
