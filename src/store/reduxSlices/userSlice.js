@@ -15,7 +15,14 @@ const userSlice = createSlice({
   reducers: {
     createNewUser: (state, actions) => {
       state.userList.push(actions.payload)
-    }
+    },
+    updateUser(state, action) {
+      const { ID } = action.payload;
+      const index = state.userList.findIndex(user => user.ID === ID);
+      if (index !== -1) {
+        state.userList[index] = action.payload;
+      }
+    },
   },
 })
 

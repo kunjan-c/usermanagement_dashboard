@@ -19,7 +19,7 @@ const UserList = () => {
   return (
     <div>
       <div>
-        <button className="create-btn">Create + </button>
+        <Link to="/create"><button className="create-btn">Create + </button></Link>
         <div className="user-table-container">
           <table className="user-table">
             <thead>
@@ -40,7 +40,6 @@ const UserList = () => {
                     <td>{data.username}</td>
                     <td>{data.email}</td>
                     <td>{data.role}</td>
-                    {/* <td><Link to={`/edit/${data.ID}`} className="user-detail-view-btn">View</Link></td> */}
                     <td><Link to={`/userDetails/${data.ID}`} className="user-detail-view-btn">View</Link></td>
 
                   </tr>

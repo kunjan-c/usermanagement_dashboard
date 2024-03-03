@@ -24,7 +24,7 @@ const UserDetails = () => {
 
         <Link to={"/"}><img src={arrowImg} className="back-arrow-img" /></Link>
         <Heading headingText="User Details"></Heading>
-        <div className="user-detail-edit-btn-container"> <button className="user-detail-edit-btn">Edit </button></div>
+        <Link to={`/update/${formData.ID}`}><div className="user-detail-edit-btn-container"> <button className="user-detail-edit-btn">Edit </button></div></Link>
       </div>
 
       <div className="user-detail-group">

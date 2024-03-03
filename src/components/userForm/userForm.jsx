@@ -1,40 +1,36 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from 'react';
 import "./userForm.css";
 import Heading from "../heading/heading";
-// import { useParams } from "react-router-dom";
-// import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { userSliceActions } from "../../store/reduxSlices/userSlice";
-import { useDispatch } from "react-redux";
-const UserForm = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [formData, setFormData] = useState({
+
+
+const UserForm = ({ initialFormData, onFormSubmit }) => {
+  console.log(initialFormData);
+  const [formData, setFormData] = useState(initialFormData || {
     ID: '',
     username: '',
     email: '',
     role: ''
   });
-//   const { id } = useParams()
-//   console.log(id);
-//   const userList = useSelector(state => state.users.userList);
-//  console.log(userList);
-//  const existingUser = userList.filter(f => f.ID == id);
-//  console.log(existingUser);
+ 
 
-// //  const {name,email} = existingUser[0];
+
+  useEffect(() => {
+    if (initialFormData) {
+      setFormData(initialFormData);
+    }
+  }, [initialFormData]);
+
   //Handle Form Input Cahnge
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    //here onSubmit we send data to redux store 
-    dispatch(userSliceActions.createNewUser(formData))
-    navigate("/")
-
+    onFormSubmit(formData);
   };
 
   return (

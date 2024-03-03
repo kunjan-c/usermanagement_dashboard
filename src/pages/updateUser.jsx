@@ -1,0 +1,33 @@
+import UserForm from "../components/userForm/userForm"
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { userSliceActions } from "../store/reduxSlices/userSlice";
+
+const UpdateUser = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const userList = useSelector(state => state.users.userList);
+
+  const existingUser = userList.filter(f => f.ID == id);
+
+  const handleSubmit = (formData) => {
+    if (existingUser) {
+      // Update existing user
+      const updatedUser = { ...existingUser, ...formData };
+      console.log(updatedUser);
+      dispatch(userSliceActions.updateUser(updatedUser));
+    }
+    navigate("/")
+
+  };
+
+  return (
+    <div>
+      {existingUser && <UserForm onFormSubmit={handleSubmit} initialFormData={existingUser[0]} />}
+    </div>
+  )
+}
+
+export default UpdateUser
