@@ -2,7 +2,7 @@
 .user-detail-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
+   
     justify-content: space-between;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
@@ -17,7 +17,11 @@
     font-weight: 600;
 
 }
-
+.user-detail-text-container{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
 .user-detail-group {
     padding: 20px 40px 40px 0px;
     display: flex;

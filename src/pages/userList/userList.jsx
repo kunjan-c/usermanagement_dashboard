@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./userList.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { userSliceActions } from "../store/reduxSlices/userSlice";
+import { userSliceActions } from "../../store/reduxSlices/userSlice";
+import Heading from "../../components/heading/heading";
 
 const UserList = () => {
   const dispatch = useDispatch()
@@ -29,7 +30,11 @@ const UserList = () => {
   return (
     <div>
       <div>
-        <Link to="/create"><button className="create-btn">Create + </button></Link>
+        <div className="userlist-header">
+        <Heading headingText="User List"></Heading>
+        <Link to="/create" className="create-btn-container"><button className="create-btn">Create + </button></Link>
+       
+        </div>
         <div className="user-table-container">
           <table className="user-table">
             <thead>

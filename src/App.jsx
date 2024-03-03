@@ -1,11 +1,15 @@
-import { BrowserRouter, Routes , Route} from "react-router-dom"
-import UserList from "./pages/userList"
-import CreateUser from "./pages/createUser"
-import UserDetails from "./pages/userDetails"
+import { BrowserRouter, Routes , Route} from "react-router-dom";
+import UserList from "./pages/userList/userList";
+import CreateUser from "./pages/createUser";
+import UserDetails from "./pages/userDetails/userDetails";
 import "./app.css";
-import UpdateUser from "./pages/updateUser"
+import UpdateUser from "./pages/updateUser";
+import Header from "./components/Header";
 const App = () => {
   return (
+    <div>
+      <Header></Header>
+   
     <BrowserRouter>
        <Routes>
         <Route path="/" element={<UserList/>}></Route>
@@ -14,7 +18,7 @@ const App = () => {
         <Route path="/userDetails/:id" element={<UserDetails/>}></Route>
        </Routes>
     </BrowserRouter>
-
+    </div>
   )
 }
 

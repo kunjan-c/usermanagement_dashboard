@@ -1,51 +1,68 @@
+body {
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  --primaryYellowColor: #fcaf3b;
 
-  
+}
 
-  body{
-    padding: 40px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    --primaryYellowColor : #fcaf3b;
-    
-  }
-  /* removing existing css of a tag */
-  a{
-    text-decoration: none;
-    color: black;
-  }
-  /* center align any element */
-  .position-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .back-arrow-img{
-    width: 30px;
+/* removing existing css of a tag */
+a {
+  text-decoration: none;
+  color: black;
+}
+button{
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
 
-  }
-  .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
+.comapny-logo-img {
+  width: 100px;
+  height: auto;
+
+}
+
+.header-container {
+  padding: 0px 0px 30px 0px;
+}
+
+/* center align any element */
+.position-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-arrow-img {
+  width: 30px;
+  padding-bottom: 13px;
+  padding-right: 20px;
+
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

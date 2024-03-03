@@ -1,3 +1,9 @@
+.userlist-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 .user-table-container {
     display: flex;
     flex-direction: column;
@@ -5,7 +11,10 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin: 20px 0px;
 }
-
+.create-btn-container{
+    display: flex;
+    justify-content: end;
+}
 .user-table {
     width: 100%;
     text-align: left;
@@ -67,24 +76,15 @@
     justify-content: space-evenly;
 }
 
-.user-detail-view-btn{
+.user-detail-view-btn, .user-detail-delete-btn{
     background-color: transparent;
     color: #fcaf3b;;
     padding: 10px 16px;
-    border-radius: 8px;
-    border: none;
     font-size: 14px;
-    cursor: pointer;
    
 }
 .user-detail-delete-btn{
-    background-color: transparent;
     color: red;;
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
     text-align: center;
    
 }
